@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="script.js"></script>
+
+  <title>Tip Calculator App</title>
+</head>
+
+<body>
+  <div class="main-container">
+
+    <img src="images/logo.svg" alt="logo icon" class="logo">
+    <div class="card-container">
+      <div class="card-inputs">
+        <div class="number-input-container">
+          <label for="bill">Bill</label>
+          <div class="number-input-content">
+            <img src="images/icon-dollar.svg" alt="dollar icon">
+            <input type="number">
+          </div>
+          <div class="radio-input-container">
+            <p>Select Tip %</p>
+            <div class="radio-content">
+              <label for="five">
+                <input type="radio" name="tip" id="five">
+                5%
+              </label>
+              <label for="ten">
+                <input type="radio" name="tip" id="ten">
+                10%
+              </label>
+              <label for="fifteen">
+                <input type="radio" name="tip" id="fifteen">
+                15%
+              </label>
+              <label for="twenty-five">
+                <input type="radio" name="tip" id="twenty-five">
+                25%
+              </label>
+              <label for="fifty">
+                <input type="radio" name="tip" id="fifty">
+                50%
+              </label>
+              <label for="custom">
+                <input type="number" name="tip" id="custom">
+              </label>
+
+            </div>
+          </div>
+          <div class="number-input-content">
+            <img src="images/icon-dollar.svg" alt="dollar icon">
+            <input type="number">
+          </div>
+        </div>
+      </div>
+      <div class="card-results">
+        <div class="results">
+          <div class="tip-amount-container"></div>
+          <div class="total-container"></div>
+        </div>
+        <button type="reset">RESET</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
