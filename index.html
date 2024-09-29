@@ -19,56 +19,83 @@
 
     <img src="images/logo.svg" alt="logo icon" class="logo">
     <div class="card-container">
-      <div class="card-inputs">
+      <form class="card-inputs" id="form" novalidate>
         <div class="number-input-container">
-          <label for="bill">Bill</label>
-          <div class="number-input-content">
-            <img src="images/icon-dollar.svg" alt="dollar icon">
-            <input type="number">
-          </div>
-          <div class="radio-input-container">
-            <p>Select Tip %</p>
-            <div class="radio-content">
-              <label for="five">
-                <input type="radio" name="tip" id="five">
-                5%
-              </label>
-              <label for="ten">
-                <input type="radio" name="tip" id="ten">
-                10%
-              </label>
-              <label for="fifteen">
-                <input type="radio" name="tip" id="fifteen">
-                15%
-              </label>
-              <label for="twenty-five">
-                <input type="radio" name="tip" id="twenty-five">
-                25%
-              </label>
-              <label for="fifty">
-                <input type="radio" name="tip" id="fifty">
-                50%
-              </label>
-              <label for="custom">
-                <input type="number" name="tip" id="custom">
-              </label>
+          <div class="input-number-label">
 
-            </div>
+            <label for="bill">Bill</label>
+            <span>Can’t be zero</span>
+
           </div>
           <div class="number-input-content">
             <img src="images/icon-dollar.svg" alt="dollar icon">
-            <input type="number">
+            <input type="number" id="bill">
           </div>
         </div>
-      </div>
+        <div class="radio-input-container">
+          <p>Select Tip %</p>
+          <div class="radio-content">
+            <label for="five" class="tip-label">
+              <input type="radio" name="tip" id="five">
+              5%
+            </label>
+            <label for="ten" class="tip-label">
+              <input type="radio" name="tip" id="ten">
+              10%
+            </label>
+            <label for="fifteen" class="tip-label">
+              <input type="radio" name="tip" id="fifteen">
+              15%
+            </label>
+            <label for="twenty-five" class="tip-label">
+              <input type="radio" name="tip" id="twenty-five">
+              25%
+            </label>
+            <label for="fifty" class="tip-label">
+              <input type="radio" name="tip" id="fifty">
+              50%
+            </label>
+            <label for="custom" class="tip-label tip-number">
+              <input type="number" name="tip" id="custom" placeholder="Custom">
+            </label>
+
+          </div>
+        </div>
+        <div class="number-input-container">
+          <div class="input-number-label">
+
+            <label for="number-of-people">Number of People</label>
+            <span>Can’t be zero</span>
+          </div>
+          <div class="number-input-content">
+            <img src="images/icon-person.svg" alt="dollar icon">
+            <input type="number" id="number-of-people">
+          </div>
+        </div>
+      </form>
       <div class="card-results">
         <div class="results">
-          <div class="tip-amount-container"></div>
-          <div class="total-container"></div>
+
+          <div class="box-amount">
+            <div class="amount-title">
+              <p>Tip Amount</p>
+              <span>/ person</span>
+            </div>
+            <p class="tip-amount-result">$0.00</p>
+          </div>
+          <div class="box-amount">
+            <div class="amount-title">
+              <p>Total</p>
+              <span>/ person</span>
+            </div>
+            <p class="totalamount-result">$0.00</p>
+          </div>
+
         </div>
-        <button type="reset">RESET</button>
+        <button type="submit" form="form">RESET</button>
       </div>
     </div>
+  </div>
   </div>
 </body>
 

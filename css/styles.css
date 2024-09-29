@@ -1,0 +1,200 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+body {
+  background-color: #C5E4E7;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Space Mono", sans-serif;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 88px;
+}
+
+.card-container {
+  display: flex;
+  padding: 32px;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 32px 43px rgba(79, 166, 175, 0.2);
+  gap: 48px;
+}
+
+.card-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.card-inputs .number-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.card-inputs .number-input-container .number-input-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F3F9FA;
+  height: 48px;
+  padding: 0 17px;
+  border-radius: 5px;
+}
+.card-inputs .number-input-container .number-input-content input[type=number] {
+  background: transparent;
+  border: none;
+  height: 100%;
+  width: 80%;
+  text-align: end;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00474B;
+}
+.card-inputs .number-input-container .number-input-content input[type=number]:focus {
+  outline: none;
+}
+.card-inputs .radio-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card-inputs .radio-input-container input[type=radio] {
+  display: none;
+}
+.card-inputs .radio-input-container .radio-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  row-gap: 16px;
+  column-gap: 14px;
+}
+.card-inputs .radio-input-container .radio-content .tip-label {
+  width: 117px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00474B;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.card-inputs .radio-input-container .radio-content .tip-label input[type=radio]:checked {
+  background-color: #26C2AE;
+}
+.card-inputs .radio-input-container .radio-content .tip-label:hover {
+  background-color: #9FE8DF;
+  color: #00474B;
+}
+.card-inputs .radio-input-container .radio-content .tip-number {
+  width: 117px;
+  height: 48px;
+  background-color: #F3F9FA;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.card-inputs .radio-input-container .radio-content .tip-number input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #00474B;
+  font-weight: bold;
+}
+.card-inputs .radio-input-container .radio-content .tip-number input::placeholder {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #547878;
+  text-align: center;
+}
+.card-inputs .radio-input-container .radio-content .tip-number input:focus {
+  outline: none;
+}
+
+.card-results {
+  background-color: #00474B;
+  border-radius: 15px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 413px;
+}
+.card-results .results {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.card-results .results .box-amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-results .results .box-amount div > p {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.card-results .results .box-amount div > span {
+  color: #7F9D9F;
+}
+.card-results .results .box-amount p {
+  color: #26C2AE;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+.card-results button {
+  background-color: #26C2AE;
+  border: none;
+  color: #00474B;
+  border-radius: 5px;
+  height: 48px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.number-input-content:focus-within {
+  border: 2px solid #26C2AE;
+}
+
+.input-number-label {
+  display: flex;
+  justify-content: space-between;
+}
+.input-number-label span {
+  display: none;
+  color: #E17457;
+  font-weight: bold;
+}
+
+.error-msg {
+  display: flex !important;
+}
+
+.error-box {
+  border: 2px solid #E17052;
+}
+
+/*# sourceMappingURL=styles.css.map */

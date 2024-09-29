@@ -1,0 +1,251 @@
+//variables
+$bg-color: #C5E4E7;
+$primary-color: #00474B;
+$secondary-color: #26C2AE;
+$input-color: #F3F9FA;
+$primary-paragraph-color: #5E7A7D;
+$secondary-paragraph-color: #7F9D9F;
+$error-paragraph-color: #E17457;
+$error-input-border-color: #E17052;
+$primary-card-border-radius: 25px;
+$secondary-card-border-radius: 15px;
+$input-border-radius: 5px;
+$box-shadow: 0 32px 43px rgba($color: #4FA6AF, $alpha: 0.2);
+$font-family: 'Space Mono', sans-serif;
+
+//resets
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+
+body {
+    background-color: $bg-color;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-family;
+}
+
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 88px;
+}
+
+.card-container {
+    display: flex;
+    padding: 32px;
+    background-color: white;
+    border-radius: $primary-card-border-radius;
+    box-shadow: $box-shadow;
+    gap: 48px;
+}
+
+.card-inputs {
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .number-input-container {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        .number-input-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: $input-color;
+            height: 48px;
+            padding: 0 17px;
+            border-radius: $input-border-radius;
+
+            input[type='number'] {
+                background: transparent;
+                border: none;
+                height: 100%;
+                width: 80%;
+                text-align: end;
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: $primary-color;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    .radio-input-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        input[type='radio'] {
+            display: none;
+        }
+
+        .radio-content {
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            row-gap: 16px;
+            column-gap: 14px;
+
+            .tip-label {
+                width: 117px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $primary-color;
+                border-radius: $input-border-radius;
+                color: white;
+                font-size: 1.5rem;
+                font-weight: bold;
+
+                & input[type="radio"]:checked {
+                    background-color: $secondary-color;
+                }
+
+                &:hover {
+                    background-color: #9FE8DF;
+                    color: $primary-color;
+                }
+            }
+
+            .tip-number {
+                width: 117px;
+                height: 48px;
+
+                background-color: #F3F9FA;
+                border-radius: $input-border-radius;
+                color: white;
+                font-size: 1.5rem;
+                font-weight: bold;
+
+                input {
+                    // padding-left: 10px;
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    background: transparent;
+                    text-align: center;
+                    font-size: 1.5rem;
+                    color: $primary-color;
+                    font-weight: bold;
+
+                    &::placeholder {
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                        color: #547878;
+                        text-align: center;
+
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+.card-results {
+    background-color: $primary-color;
+    border-radius: $secondary-card-border-radius;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 413px;
+
+    .results {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .box-amount {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            div>p {
+
+                color: white;
+                font-weight: bold;
+                font-size: 1rem;
+            }
+
+            div>span {
+                color: $secondary-paragraph-color;
+            }
+
+            p {
+                color: $secondary-color;
+                font-size: 3rem;
+                font-weight: bold;
+                letter-spacing: -1px;
+            }
+
+
+        }
+    }
+
+    button {
+        background-color: $secondary-color;
+        border: none;
+        color: $primary-color;
+        border-radius: $input-border-radius;
+        height: 48px;
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+}
+
+.number-input-content:focus-within {
+    border: 2px solid $secondary-color;
+}
+
+
+.input-number-label {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+        display: none;
+        color: $error-paragraph-color;
+        font-weight: bold;
+    }
+
+}
+
+.error-msg {
+    display: flex !important;
+}
+
+.error-box {
+    border: 2px solid $error-input-border-color;
+}
